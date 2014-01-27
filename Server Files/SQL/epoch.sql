@@ -30,7 +30,6 @@ CREATE TABLE IF NOT EXISTS `Character_DATA` (
   `KillsH` int(11) unsigned NOT NULL DEFAULT '0',
   `Model` varchar(50) NOT NULL DEFAULT '"Survivor2_DZ"',
   `KillsB` int(11) unsigned NOT NULL DEFAULT '0',
-  `Humanity` int(11) NOT NULL DEFAULT '2500',
   `Infected` tinyint(3) DEFAULT '0',
   PRIMARY KEY (`CharacterID`),
   KEY `PlayerUID` (`PlayerUID`) USING BTREE,
@@ -75,6 +74,7 @@ CREATE TABLE IF NOT EXISTS `Player_DATA` (
   `PlayerName` varchar(128) CHARACTER SET utf8 NOT NULL DEFAULT 'Null',
   `PlayerMorality` int(11) NOT NULL DEFAULT '0',
   `PlayerSex` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `Humanity` int(11) NOT NULL DEFAULT '2500',
   PRIMARY KEY (`PlayerUID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
